@@ -1,0 +1,23 @@
+{
+  "name": "cut-the-picture",
+  "version": "1.0.0",
+  "description": "wawcode9-jestesmy-niezli",
+  "main": "imgSplit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wawcode9-jestesmy-niezli/cut-the-picture.git"
+  },
+  "author": "szbijowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wawcode9-jestesmy-niezli/cut-the-picture/issues"
+  },
+  "homepage": "https://github.com/wawcode9-jestesmy-niezli/cut-the-picture#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "sharp": "^0.23.1"
+  }
+}
