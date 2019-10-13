@@ -35,15 +35,19 @@ image
     console.log(splitNumHorizontal);
     console.log(splitNumVertical);
     var i,j;
-    for (i = 0; i < splitNumHorizontal; i++) { 
-        for (j = 0; j < splitNumVertical; j++) { 
-            console.log('\x1b[36m%s\x1b[0m', 'iteration:' + i+'x'+j); 
+    var outputOrder = 0;
+    for (j = 0; j < splitNumVertical && j*puzzleWidth + puzzleWidth <= orgHeight; j++) { 
+      for (i = 0; i < splitNumHorizontal && i*puzzleWidth + puzzleWidth <= orgWidth  ; i++) { //
+            
             // file name for cropped image
-            let outputImage = i+'x'+j+'.jpg';
-
+            let outputImage = outputOrder+'.jpg';//i+'x'+j+'.jpg';
+            console.log('\x1b[36m%s\x1b[0m', outputImage); 
             console.log("width: "+puzzleWidth);
-            console.log("left: "+i*puzzleWidth);
-            console.log(outputImage);
+            console.log("left: ");
+            console.log(i*puzzleWidth);
+            console.log("top: ");
+            console.log(j*puzzleWidth);
+
             image.extract({ width: puzzleWidth, height: puzzleWidth, left: i*puzzleWidth, top: j*puzzleWidth }).toFile(outputImage)
             .then(function(new_file_info) {
                 console.log("Image cropped and saved");
@@ -52,6 +56,7 @@ image
                 console.log("An error occured");
                 console.log(err);
             });        
+            outputOrder++;
         }
     }
 }
