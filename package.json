@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/wawcode9-jestesmy-niezli/cut-the-picture#readme",
   "dependencies": {
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "sharp": "^0.23.1"
   }
 }
